@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <div class="quiz" data-value="0" onclick="fetchQuestions('https://opentdb.com/api.php?amount=5&category=23&difficulty=easy')">History</div>
+        <div class="quiz" data-value="1" onclick="fetchQuestions('https://opentdb.com/api.php?amount=5&category=22&difficulty=easy')">Geography</div>
+        <div class="quiz" data-value="2" onclick="fetchQuestions('https://opentdb.com/api.php?amount=5&category=27&difficulty=easy')">Animals</div>
+        <div class="quiz" data-value="3" onclick="fetchQuestions('https://opentdb.com/api.php?amount=5&category=28&difficulty=easy')">Vehicles</div>
+    </div>
+    <div id="question-container" style="display: none;">
+        <h3 id="home" style="color: deepskyblue; display: none;">Home</h3>
+        <div class="progress-container" id="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div id="question"></div>
+        <div id="options"></div>
+        <div id="msg" style="display: none;"></div>
+        <button id="back-button">Back</button>
+        <button id="next-button">Next</button>
+        <button id="submit" style="display: none;">Submit</button>       
+        <div id="score" style="display: none;">Your Score is: </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
